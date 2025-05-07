@@ -26,7 +26,7 @@ font-family: "Poppins", sans-serif;
 /* Fuente general */
 body {
   font-family: Arial, sans-serif;
-  background-color: #007bff;
+  background-color: #A68855;
   color: rgb(120, 118, 118);
 }
 
@@ -54,7 +54,7 @@ body {
   text-decoration: none;
   color: rgb(53, 4, 67);
   font-weight: bold;
-  font-size: 16px;
+  font-size: 22px;
   transition: color 0.3s;
 }
 
@@ -88,9 +88,9 @@ body {
     margin: 40px auto;
     padding: 20px;
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .Solent-text h2 {
@@ -98,7 +98,7 @@ body {
     font-size: 3rem;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #A68855;
     padding-bottom: 10px;
 }
 
@@ -115,4 +115,116 @@ body {
     transform: translateY(-5px);
     transition: transform 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Style for Why Solent section */
+.Why-Solent {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Why-Solent h2 {
+  color: #350443;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #A68855;
+  padding-bottom: 10px;
+}
+
+.Why-Solent p {
+  color: #662727;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 0 15px;
+}
+
+/* Hover effect for the entire section */
+.Why-Solent:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+
+  
+}
+/* Style for Testimonials section */
+.Testimonials {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Testimonials h2 {
+  color: #350443;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #A68855;
+  padding-bottom: 10px;
+}
+
+.Testimonials p {
+  color: #662727;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 0 15px;
+}
+
+/* Hover effect for the entire section */
+.Testimonials:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+
+  
+}
+/* Style for Testimonials2 section */
+.Testimonials2 {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Testimonials2 h2 {
+  color: #350443;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #A68855;
+  padding-bottom: 10px;
+}
+
+.Testimonials2 p {
+  color: #662727;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 0 15px;
+}
+
+/* Hover effect for the entire section */
+.Testimonials2:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+
+  
 }
