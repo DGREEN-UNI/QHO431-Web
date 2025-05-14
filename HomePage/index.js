@@ -19,3 +19,26 @@ navItems.forEach(item => {
         item.classList.add('active');
     }
 });
+
+// Add to your existing JavaScript or create a new file
+document.addEventListener('DOMContentLoaded', function() {
+    const flipCards = document.querySelectorAll('.flip-card');
+    
+    // Add click event for mobile devices
+    if (window.innerWidth <= 768) {
+        flipCards.forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    }
+    
+    // Optional: Auto-rotate back when mouse leaves (desktop only)
+    if (window.innerWidth > 768) {
+        flipCards.forEach(card => {
+            card.addEventListener('mouseleave', function() {
+                this.querySelector('.flip-card-inner').style.transform = 'rotateY(0)';
+            });
+        });
+    }
+});
