@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Listing - Solent University</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/solent-logo.png" alt="Solent University Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="courselisting.html" class="active">Courses</a></li>
+                <li><a href="InstructorProfiles.html">Instructors</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="ContactForm.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="courses-container">
+        <h1>Our Courses</h1>
+        
+        <div class="course-grid">
+            <!-- Data Analyst -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="images/data-analyst.jpg" alt="Data Analyst Course">
+                </div>
+                <div class="course-details">
+                    <h2>Data Analyst</h2>
+                    <p class="duration">12 Weeks | Online</p>
+                    <p class="description">Master data visualization, SQL, and statistical analysis to transform raw data into actionable insights.</p>
+                    <ul class="topics">
+                        <li>Excel and Power BI</li>
+                        <li>SQL Databases</li>
+                        <li>Python for Analytics</li>
+                    </ul>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- Data Scientist -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="images/Data-Scientist.jpg" alt="Data Science Course">
+                </div>
+                <div class="course-details">
+                    <h2>Data Scientist</h2>
+                    <p class="duration">16 Weeks | Online</p>
+                    <p class="description">Develop machine learning models and advanced analytics skills for solving complex business problems.</p>
+                    <ul class="topics">
+                        <li>Machine Learning</li>
+                        <li>Big Data Processing</li>
+                        <li>Predictive Modeling</li>
+                    </ul>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- Cyber Security Analyst -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="images/cyber-security.jpg" alt="Cyber Security Course">
+                </div>
+                <div class="course-details">
+                    <h2>Cyber Security Analyst</h2>
+                    <p class="duration">14 Weeks | Hybrid</p>
+                    <p class="description">Learn to protect systems and networks from digital attacks and security breaches.</p>
+                    <ul class="topics">
+                        <li>Ethical Hacking</li>
+                        <li>Network Security</li>
+                        <li>Risk Management</li>
+                    </ul>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- Machine Learning Engineer -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="images/Machine-Learning-Engineer.jpg" alt="Machine Learning Course">
+                </div>
+                <div class="course-details">
+                    <h2>Machine Learning Engineer</h2>
+                    <p class="duration">20 Weeks | Online</p>
+                    <p class="description">Build and deploy intelligent systems using cutting-edge AI algorithms and frameworks.</p>
+                    <ul class="topics">
+                        <li>Neural Networks</li>
+                        <li>TensorFlow/PyTorch</li>
+                        <li>Model Deployment</li>
+                    </ul>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- Digital Marketing -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="images/digital-marketing.jpg" alt="Digital Marketing Course">
+                </div>
+                <div class="course-details">
+                    <h2>Digital Marketing</h2>
+                    <p class="duration">10 Weeks | Online</p>
+                    <p class="description">Master SEO, social media, and content marketing strategies for the digital age.</p>
+                    <ul class="topics">
+                        <li>SEO & SEM</li>
+                        <li>Social Media Marketing</li>
+                        <li>Analytics & Optimization</li>
+                    </ul>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <!-- UI/UX Design -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="images/ui-ux.jpg" alt="UI/UX Design Course">
+                </div>
+                <div class="course-details">
+                    <h2>UI/UX Design</h2>
+                    <p class="duration">12 Weeks | Hybrid</p>
+                    <p class="description">Create intuitive and beautiful digital experiences through user-centered design.</p>
+                    <ul class="topics">
+                        <li>User Research</li>
+                        <li>Wireframing & Prototyping</li>
+                        <li>Interaction Design</li>
+                    </ul>
+                    <button class="enroll-btn">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="solent-footer">
+        <div class="footer-content">
+            <img src="images/solent-logo.png" alt="Solent University Logo" class="footer-logo">
+            <div class="copyright">
+                <p>&copy; <span id="current-year"></span> Solent University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../public/index.js"></script>
+    <script>
+        // Update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Add active class to current page in navigation
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if(link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

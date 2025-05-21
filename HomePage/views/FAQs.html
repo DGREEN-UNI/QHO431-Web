@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Solent University Online Learning</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/solent-logo.png" alt="Solent University Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="courselisting.html">Courses</a></li>
+                <li><a href="InstructorProfiles.html">Instructors</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="FAQs.html" class="active">FAQs</a></li>
+                <li><a href="ContactForm.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        
+        <div class="faq-section">
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I enroll in a course?</span>
+                    <i class="faq-icon">+</i>
+                </button>
+                <div class="faq-answer">
+                    <p>You can enroll in any course by visiting our course listing page, selecting your desired course, and clicking the "Enroll Now" button. You'll need to create an account if you don't already have one.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What are the technical requirements?</span>
+                    <i class="faq-icon">+</i>
+                </button>
+                <div class="faq-answer">
+                    <p>You'll need a computer or tablet with internet access. Most courses work best with Chrome or Firefox browsers. Some courses may require specific software, which will be listed in the course requirements.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I access courses on mobile devices?</span>
+                    <i class="faq-icon">+</i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! Our platform is fully responsive and works on smartphones and tablets. However, some courses with specialized software may recommend using a desktop computer.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I interact with instructors?</span>
+                    <i class="faq-icon">+</i>
+                </button>
+                <div class="faq-answer">
+                    <p>Each course has discussion forums where you can ask questions. Many instructors also hold live Q&A sessions, and you can message them directly through our platform.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What if I need to pause my studies?</span>
+                    <i class="faq-icon">+</i>
+                </button>
+                <div class="faq-answer">
+                    <p>Our self-paced courses allow you to study on your schedule. If you need to take a break, you can pick up where you left off when you're ready to continue.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are there any prerequisites for courses?</span>
+                    <i class="faq-icon">+</i>
+                </button>
+                <div class="faq-answer">
+                    <p>Some advanced courses may have prerequisites, which will be clearly listed on the course description page. Most beginner courses require no prior experience.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do assessments work?</span>
+                    <i class="faq-icon">+</i>
+                </button>
+                <div class="faq-answer">
+                    <p>Courses include a mix of quizzes, practical assignments, and sometimes final projects. You'll receive feedback from instructors or teaching assistants.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I get a certificate upon completion?</span>
+                    <i class="faq-icon">+</i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! Upon successfully completing a course, you'll receive a digital certificate from Solent University that you can share on LinkedIn or print for your records.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="solent-footer">
+        <div class="footer-content">
+            <img src="images/solent-logo.png" alt="Solent University Logo" class="footer-logo">
+            <div class="copyright">
+                <p>&copy; <span id="current-year"></span> Solent University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../public/index.js"></script>
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.faq-icon');
+                
+                question.classList.toggle('active');
+                answer.classList.toggle('active');
+                icon.textContent = question.classList.contains('active') ? '−' : '+';
+            });
+        });
+
+        // Update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
