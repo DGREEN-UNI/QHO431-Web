@@ -136,7 +136,6 @@ nav a:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-
 .image-container {
   margin: 20px auto;
   text-align: center;
@@ -168,10 +167,9 @@ nav a:hover {
 }
 .solent-footer img {
   max-width: 75px;
-  height: auto; 
-  display: block; 
-  margin: 0 auto; 
- 
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .copyright {
@@ -511,20 +509,6 @@ nav a:hover {
   outline: none;
 }
 
-.checkbox-group {
-  display: flex;
-  align-items: center;
-}
-
-.checkbox-group input[type="checkbox"] {
-  width: auto;
-  margin-right: 10px;
-}
-
-.phone-group {
-  transition: all 0.3s ease;
-}
-
 .submit-btn {
   background-color: #350443;
   color: white;
@@ -677,7 +661,7 @@ nav a:hover {
   font-size: 2.8rem;
   text-align: center;
   margin-bottom: 40px;
-  border-bottom: 2px solid #A68855;
+  border-bottom: 2px solid #a68855;
   padding-bottom: 10px;
 }
 
@@ -726,8 +710,9 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-.date, .location {
-  color: #A68855;
+.date,
+.location {
+  color: #a68855;
   font-weight: bold;
   margin-bottom: 8px;
 }
@@ -767,14 +752,14 @@ nav a:hover {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .events-container h1 {
-      font-size: 2.2rem;
+    font-size: 2.2rem;
   }
-  
+
   .events-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
-  
+
   .event-image {
-      height: 180px;
+    height: 180px;
   }
 }
