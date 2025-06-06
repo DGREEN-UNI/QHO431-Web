@@ -19,25 +19,3 @@ navItems.forEach((item) => {
     item.classList.add("active");
   }
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
-  const successMessage = document.getElementById("successMessage");
-
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Prevent default form submission
-
-      // Show the success message
-      successMessage.style.display = "block";
-
-      // Reset the form
-      form.reset();
-
-      // Hide the message after 5 seconds (optional)
-      setTimeout(() => {
-        successMessage.style.display = "none";
-      }, 5000);
-    });
-  }
-});

@@ -2,13 +2,14 @@
 <footer class="solent-footer">
   <div class="footer-content">
     <div class="logo">
-      <img src="images/solent-logo.png" alt="solent-logo" />
+      <img src="/images/solent-logo.png" alt="solent-logo" />
     </div>
     <%- include("./nav") %>
     <div class="copyright">
       <p>
-        &copy; <span id="current-year"></span> Solent University. All rights
-        reserved.
+        &copy;
+        <span id="current-year"><%= new Date().getFullYear() %></span> Solent
+        University. All rights reserved.
       </p>
       <p></p>
     </div>

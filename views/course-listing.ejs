@@ -4,32 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Course Listing - Solent University</title>
-    <link rel="stylesheet" href="../public/style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <img
-            src="/public/images/solent-logo.png"
-            alt="Solent University Logo"
-          />
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.ejs">Home</a></li>
-          <li><a href="courselisting.ejs" class="active">Courses</a></li>
-          <li><a href="InstructorProfiles.ejs">Instructors</a></li>
-          <li><a href="Events.ejs">Events</a></li>
-          <li><a href="FAQs.ejs">FAQs</a></li>
-          <li><a href="ContactForm.ejs">Contact</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-    </header>
+    <%- include("./partials/header") %>
 
     <main class="courses-container">
       <h1>Our Courses</h1>

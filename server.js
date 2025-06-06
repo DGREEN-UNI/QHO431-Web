@@ -1,23 +1,17 @@
 const express = require("express");
 const path = require("path");
-const sqlite3 = require("sqlite3").verbose();
+const db = require("./db.js");
 
 const app = express();
 const port = 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.json());
 
 // View engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-
-// SQLite DB connection
-const db = new sqlite3.Database("contactform.db", (err) => {
-  if (err) {
-    console.error("Database opening error: " + err.message);
-  }
-});
 
 db.run(`
   CREATE TABLE IF NOT EXISTS contactform (
@@ -28,32 +22,43 @@ db.run(`
   )
 `);
 
+/**
+ * Routes
+ */
 app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/contactform", (req, res) => {
-  res.render("contactform", { success: false });
+app.get("/course-listing", (req, res) => {
+  res.render("course-listing");
+});
+
+app.get("/instructor-profiles", (req, res) => {
+  res.render("instructor-profiles");
+});
+
+app.get("/contact-form", (req, res) => {
+  res.render("contact-form");
 });
 
 app.post("/submit-form", (req, res) => {
   const { name, email, message } = req.body;
 
-  console.log("Form submitted:", name, email, message); // ✅ Log inputs
+  new Promise((resolve, reject) => {
+    db.run(
+      `INSERT INTO contactform (name, email, message) VALUES (?, ?, ?)`,
+      [name, email, message],
+      function (err) {
+        if (err) {
+          console.error("Insert error: " + err.message);
+          return reject(err);
+        }
 
-  db.run(
-    `INSERT INTO contactform (name, email, message) VALUES (?, ?, ?)`,
-    [name, email, message],
-    function (err) {
-      if (err) {
-        console.error("Insert error: " + err.message);
-        return res.render("contactform", { success: false });
+        console.log(`✅ Saved: ${name}, ${email}`);
+        resolve({ id: this.lastID, name, email, message });
       }
-
-      console.log(`✅ Saved: ${name}, ${email}`);
-      res.render("contactform", { success: true });
-    }
-  );
+    );
+  });
 });
 
 app.listen(port, () => {

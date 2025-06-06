@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Solent University</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <%- include("./partials/header") %>
+
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+
+      <div id="successMessage" class="success-message" style="display: none">
+        Thank you! Your message has been sent successfully.
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" id="submit-btn">Send</button>
+      </form>
+    </div>
+
+    <%- include("./partials/footer") %>
+
+    <script type="module" src="/js/handle-form.js"></script>
+  </body>
+</html>
