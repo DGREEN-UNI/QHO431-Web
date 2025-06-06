@@ -4,29 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage</title>
-    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-              <img src="/public/images/solent-logo.png" alt="Solent University Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.ejs" class="nav-link">Home</a></li>
-                <li><a href="courselisting.ejs" class="nav-link">Courses</a></li>
-                <li><a href="InstructorProfiles.ejs" class="nav-link">Instructors</a></li>
-                <li><a href="Events.ejs" class="nav-link">Events</a></li>
-                <li><a href="FAQs.ejs" class="nav-link">FAQs</a></li>
-                <a href="ContactForm.ejs">Contact</a>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
+  <%- include("./partials/header") %>
 
     <section class="instructor-profiles">
         <h2>Meet Our Instructors</h2>
@@ -36,7 +17,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <div class="instructor-image">
-                  <img src="/public/images/AvaSamuel.jpg" alt="Dr. Ava Samuel">
+                  <img src="/images/AvaSamuel.jpg" alt="Dr. Ava Samuel">
                 </div>
                 <div class="instructor-info">
                   <h3>Dr. Ava Samuel</h3>
@@ -57,7 +38,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <div class="instructor-image">
-                  <img src="/public/images/IsmailKhan.jpg" alt="Prof. Ismail Khan">
+                  <img src="images/IsmailKhan.jpg" alt="Prof. Ismail Khan">
                 </div>
                 <div class="instructor-info">
                   <h3>Prof. Ismail Khan</h3>
@@ -77,7 +58,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <div class="instructor-image">
-                  <img src="/public/images/KarlDietrich.jpg" alt="Prof. Karl Dietrich">
+                  <img src="/images/KarlDietrich.jpg" alt="Prof. Karl Dietrich">
                 </div>
                 <div class="instructor-info">
                   <h3>Prof. Karl Dietrich</h3>
@@ -96,7 +77,7 @@
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <div class="instructor-image">
-                      <img src="/public/images/KerryJohnson.jpg" alt="Prof. Kerry Johnson">
+                      <img src="/images/KerryJohnson.jpg" alt="Prof. Kerry Johnson">
                     </div>
                     <div class="instructor-info">
                       <h3>Prof. Kerry Johnson</h3>
@@ -115,7 +96,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <div class="instructor-image">
-                  <img src="/public/images/PeterSteel.jpg" alt="Prof. Peter Steel">
+                  <img src="/images/PeterSteel.jpg" alt="Prof. Peter Steel">
                 </div>
                 <div class="instructor-info">
                   <h3>Prof. Peter Steel</h3>
@@ -134,7 +115,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <div class="instructor-image">
-                  <img src="/public/images/SamuelBrown.jpg" alt="Prof. Samuel Brown">
+                  <img src="/images/SamuelBrown.jpg" alt="Prof. Samuel Brown">
                 </div>
                 <div class="instructor-info">
                   <h3>Prof. Samuel Brown</h3>
@@ -152,24 +133,13 @@
       </section>
       </section>
     
-   
-    <footer class="solent-footer">
-        <div class="footer-content">
-          <img src="/public/images/solent-logo.png" alt="Solent University Logo" class="footer-logo">
+    <%- include("./partials/footer") %>
 
-            <div class="copyright">
-                <p>&copy; <span id="current-year"></span> Solent University. All rights reserved.</p>
-                <p></p>
-            </div>
-        </div>
-
-        
-    </footer>
-
-    <script src="../public/index.js"></script>
+    <script src="/js/index.js"></script>
     <script>
-        // Auto-update copyright year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+      // Auto-update copyright year
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
     </script>
-</body>
+  </body>
 </html>

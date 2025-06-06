@@ -16,10 +16,7 @@
         <!-- Data Analyst Course Information-->
         <div class="course-card">
           <div class="course-image">
-            <img
-              src="/public/images/Data-Analyst.jpg"
-              alt="Data Analyst Course"
-            />
+            <img src="/images/Data-Analyst.jpg" alt="Data Analyst Course" />
           </div>
           <div class="course-details">
             <h2>Data Analyst</h2>
@@ -33,17 +30,14 @@
               <li>SQL Databases</li>
               <li>Python for Analytics</li>
             </ul>
-            <a href="ContactForm.ejs" class="enroll-btn">Enroll Now</a>
+            <a href="contact-form" class="enroll-btn">Enroll Now</a>
           </div>
         </div>
 
         <!-- Data Scientist Course Information -->
         <div class="course-card">
           <div class="course-image">
-            <img
-              src="/public/images/Data-Scientist.jpg"
-              alt="Data Scientist Course"
-            />
+            <img src="/images/Data-Scientist.jpg" alt="Data Scientist Course" />
           </div>
           <div class="course-details">
             <h2>Data Scientist</h2>
@@ -57,17 +51,14 @@
               <li>Big Data Processing</li>
               <li>Predictive Modeling</li>
             </ul>
-            <a href="ContactForm.ejs" class="enroll-btn">Enroll Now</a>
+            <a href="contact-form" class="enroll-btn">Enroll Now</a>
           </div>
         </div>
 
         <!-- Cyber Security Analyst Course Information -->
         <div class="course-card">
           <div class="course-image">
-            <img
-              src="/public/images/Cyber-Security.jpg"
-              alt="Cyber Security Course"
-            />
+            <img src="/images/Cyber-Security.jpg" alt="Cyber Security Course" />
           </div>
           <div class="course-details">
             <h2>Cyber Security Analyst</h2>
@@ -81,7 +72,7 @@
               <li>Network Security</li>
               <li>Risk Management</li>
             </ul>
-            <a href="ContactForm.ejs" class="enroll-btn">Enroll Now</a>
+            <a href="contact-form" class="enroll-btn">Enroll Now</a>
           </div>
         </div>
 
@@ -89,7 +80,7 @@
         <div class="course-card">
           <div class="course-image">
             <img
-              src="/public/images/Machine-Learning-Engineer.jpg"
+              src="/images/Machine-Learning-Engineer.jpg"
               alt="Machine Learning Course"
             />
           </div>
@@ -105,7 +96,7 @@
               <li>TensorFlow/PyTorch</li>
               <li>Model Deployment</li>
             </ul>
-            <a href="ContactForm.ejs" class="enroll-btn">Enroll Now</a>
+            <a href="contact-form" class="enroll-btn">Enroll Now</a>
           </div>
         </div>
 
@@ -113,7 +104,7 @@
         <div class="course-card">
           <div class="course-image">
             <img
-              src="/public/images/Digital-Marketing.jpg"
+              src="/images/Digital-Marketing.jpg"
               alt="Digital Marketing Course"
             />
           </div>
@@ -129,14 +120,14 @@
               <li>Social Media Marketing</li>
               <li>Analytics & Optimization</li>
             </ul>
-            <a href="ContactForm.ejs" class="enroll-btn">Enroll Now</a>
+            <a href="contact-form" class="enroll-btn">Enroll Now</a>
           </div>
         </div>
 
         <!-- UI/UX Course Information -->
         <div class="course-card">
           <div class="course-image">
-            <img src="/public/images/UI-UX.jpg" alt="UI/UX Design Course" />
+            <img src="/images/UI-UX.jpg" alt="UI/UX Design Course" />
           </div>
           <div class="course-details">
             <h2>UI/UX Design</h2>
@@ -150,40 +141,19 @@
               <li>Wireframing & Prototyping</li>
               <li>Interaction Design</li>
             </ul>
-            <a href="ContactForm.ejs" class="enroll-btn">Enroll Now</a>
+            <a href="contact-form" class="enroll-btn">Enroll Now</a>
           </div>
         </div>
       </div>
     </main>
 
-    <footer class="solent-footer">
-      <div class="footer-content">
-        <img
-          src="/public/images/solent-logo.png"
-          alt="Solent University Logo"
-          class="footer-logo"
-        />
-        <div class="copyright">
-          <p>
-            &copy; <span id="current-year"></span> Solent University. All rights
-            reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
+    <%- include("./partials/footer") %>
 
-    <script src="/public/images/"></script>
+    <script src="/js/index.js"></script>
     <script>
-      // Update copyright year
+      // Auto-update copyright year
       document.getElementById("current-year").textContent =
         new Date().getFullYear();
-
-      // Add active class to current page in navigation
-      document.querySelectorAll(".nav-links a").forEach((link) => {
-        if (link.href === window.location.href) {
-          link.classList.add("active");
-        }
-      });
     </script>
   </body>
 </html>

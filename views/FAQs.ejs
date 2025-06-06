@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQs - Solent University Online Learning</title>
-    <link rel="stylesheet" href="../public/style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <%- include("./partials/header") %>
@@ -13,7 +13,7 @@
       <h1>Frequently Asked Questions</h1>
 
       <div class="faq-section">
-        <!-- FAQ 1 -->
+        <!-- faq -->
         <div class="faq-item">
           <button class="faq-question">
             <span>How do I enroll in a course?</span>
@@ -137,23 +137,9 @@
       </div>
     </main>
 
-    <footer class="solent-footer">
-      <div class="footer-content">
-        <img
-          src="/public/images/solent-logo.png"
-          alt="Solent University Logo"
-          class="footer-logo"
-        />
-        <div class="copyright">
-          <p>
-            &copy; <span id="current-year"></span> Solent University. All rights
-            reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
+    <%- include("./partials/footer") %>
 
-    <script src="../public/index.js"></script>
+    <script src="/js/index.js"></script>
     <script>
       // FAQ toggle functionality
       document.querySelectorAll(".faq-question").forEach((question) => {
@@ -167,7 +153,7 @@
         });
       });
 
-      // Update copyright year
+      // Auto-update copyright year
       document.getElementById("current-year").textContent =
         new Date().getFullYear();
     </script>

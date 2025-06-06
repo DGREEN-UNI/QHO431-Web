@@ -40,6 +40,13 @@ app.get("/instructor-profiles", (req, res) => {
 app.get("/contact-form", (req, res) => {
   res.render("contact-form");
 });
+app.get("/events", (req, res) => {
+  res.render("events");
+});
+
+app.get("/faqs", (req, res) => {
+  res.render("faqs");
+});
 
 app.post("/submit-form", (req, res) => {
   const { name, email, message } = req.body;
@@ -58,7 +65,14 @@ app.post("/submit-form", (req, res) => {
         resolve({ id: this.lastID, name, email, message });
       }
     );
-  });
+  })
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((error) => {
+      console.error("Error saving form data:", error);
+      res.status(500).json({ error: "Internal Server Error" });
+    });
 });
 
 app.listen(port, () => {

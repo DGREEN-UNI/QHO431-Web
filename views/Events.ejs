@@ -16,7 +16,7 @@
         <!-- Future Events -->
         <div class="event-card">
           <div class="event-image">
-            <img src="/public/images/Future.jpg" alt="Prepare For The Future" />
+            <img src="/images/Future.jpg" alt="Prepare For The Future" />
           </div>
           <div class="event-details">
             <h2>Prepare For The Future</h2>
@@ -31,14 +31,14 @@
               <li>Hands-on workshops</li>
               <li>Networking opportunities</li>
             </ul>
-            <a href="ContactForm.ejs" class="register-btn">Register Now</a>
+            <a href="contact-form" class="register-btn">Register Now</a>
           </div>
         </div>
 
         <!-- Coding Bootcamp -->
         <div class="event-card">
           <div class="event-image">
-            <img src="/public/images/Coding.jpg" alt="Coding Bootcamp" />
+            <img src="/images/Coding.jpg" alt="Coding Bootcamp" />
           </div>
           <div class="event-details">
             <h2>Coding Bootcamp</h2>
@@ -52,14 +52,14 @@
               <li>Daily coding challenges</li>
               <li>Portfolio project</li>
             </ul>
-            <a href="ContactForm.ejs" class="register-btn">Register Now</a>
+            <a href="contact-form" class="register-btn">Register Now</a>
           </div>
         </div>
 
         <!-- Data Science Webinar -->
         <div class="event-card">
           <div class="event-image">
-            <img src="/public/images/webinar.jpg" alt="Data Science Webinar" />
+            <img src="/images/webinar.jpg" alt="Data Science Webinar" />
           </div>
           <div class="event-details">
             <h2>Data Webinar</h2>
@@ -74,39 +74,15 @@
               <li>Interactive exercises</li>
               <li>Q&A with industry experts</li>
             </ul>
-            <a href="ContactForm.ejs" class="register-btn">Register Now</a>
+            <a href="contact-form" class="register-btn">Register Now</a>
           </div>
         </div>
       </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="solent-footer">
-      <div class="footer-content">
-        <img
-          src="/public/images/solent-logo.png"
-          alt="Solent University Logo"
-          class="footer-logo"
-        />
-        <div class="footer-links">
-          <a href="Homepage.html">Home</a>
-          <a href="courselisting.html">Courses</a>
-          <a href="InstructorProfiles.html">Instructors</a>
-          <a href="Events.html">Events</a>
-          <a href="FAQs.html">FAQs</a>
-          <a href="ContactForm.html">Contact</a>
-        </div>
-        <div class="copyright">
-          <p>
-            &copy; <span id="current-year"></span> Solent University. All rights
-            reserved.
-          </p>
-          <p></p>
-        </div>
-      </div>
-    </footer>
+    <%- include("./partials/footer") %>
 
-    <script src="../public/index.js"></script>
+    <script src="/js/index.js"></script>
     <script>
       // Auto-update copyright year
       document.getElementById("current-year").textContent =
