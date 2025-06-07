@@ -525,10 +525,10 @@ nav a:hover {
 }
 
 .success-message {
-  background-color: #030303;
+  background-color: #4a075e;
   color: #155724;
   padding: 15px 20px;
-  border: 1px solid #0a0a0a;
+  border: 1px solid #f3f1f1;
   border-radius: 5px;
   margin-bottom: 20px;
   font-weight: 600;
