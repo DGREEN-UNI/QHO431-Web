@@ -177,7 +177,7 @@ nav a:hover {
   line-height: 1.6;
 }
 
-/* Responsive adjustments */
+/* Mobile phones */
 @media (max-width: 768px) {
   .footer-links {
     flex-direction: column;
@@ -189,7 +189,7 @@ nav a:hover {
   }
 }
 
-/* Responsive adjustments */
+/* Mobile phones */
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -445,7 +445,7 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* Responsive adjustments */
+/* Mobile phones */
 @media (max-width: 768px) {
   .faq-container h1 {
     font-size: 2.2rem;
@@ -645,7 +645,7 @@ nav a:hover {
   background-color: #4a075e;
 }
 
-/* Responsive adjustments */
+/* Mobile phones */
 @media (max-width: 768px) {
   .courses-container h1 {
     font-size: 2.2rem;
@@ -760,7 +760,7 @@ nav a:hover {
   background-color: #4a075e;
 }
 
-/* Responsive adjustments */
+/* mobile phones */
 @media (max-width: 768px) {
   .events-container h1 {
     font-size: 2.2rem;
